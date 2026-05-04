@@ -39,7 +39,7 @@ final_df = raw_df.withColumn("qa", extract_udf(col("raw_text"))) \
                  .filter(col("instruction").isNotNull())
 
 # STEP 4: Merge into 1 partition and save
-final_output_path = "s3://25hnxx-cisc886-project-data/processed/final_qa_dataset/"
+final_output_path = "s3://25hnxx-cisc886-project-data/processed/"
 
 # coalesce(1) tells Spark to pull all data onto one node to create a single file
 final_df.coalesce(1).write.mode("overwrite").json(final_output_path)
