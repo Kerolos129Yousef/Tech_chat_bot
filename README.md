@@ -16,6 +16,10 @@ The architecture follows a cost-optimized, hybrid development-to-production life
 
    In strict compliance with the course's resource naming policy, all AWS resources created during this project—including the custom VPC, subnets, route tables, security groups, EMR cluster, S3 bucket, and EC2 instance—are prefixed with the Queen's NetID to ensure complete isolation and ease of grading.
 ---
+## Architecture Diagram
+
+![End-to-End Pipeline Architecture](Architecture.jpeg)
+
 ## 2. Prerequisites & Environment Setup
  
 Before reproducing this project, ensure the following tools, accounts, and environments are set up:
