@@ -16,7 +16,21 @@ The architecture follows a cost-optimized, hybrid development-to-production life
 
    In strict compliance with the course's resource naming policy, all AWS resources created during this project—including the custom VPC, subnets, route tables, security groups, EMR cluster, S3 bucket, and EC2 instance—are prefixed with the Queen's NetID to ensure complete isolation and ease of grading.
 ---
-
+## 2. Prerequisites & Environment Setup
+ 
+Before reproducing this project, ensure the following tools, accounts, and environments are set up:
+ 
+### AWS Infrastructure Requirements
+* **AWS Account Access**: IAM credentials configured with access to AWS VPC, S3, EMR, and EC2.
+* **AWS Region**: `us-east-1`.
+* **AWS CLI**: Installed and configured via `aws configure` on your local host.
+### Local Development Environment
+* **Docker Desktop**: Installed with the WSL 2 Linux backend enabled.
+* **NVIDIA Drivers**: Version `550.xx` or higher.
+* **NVIDIA Container Toolkit**: Installed to enable GPU passthrough into Docker containers during the training phase.
+* **Terraform**: Installed for Infrastructure as Code.
+* **Python**: Version `3.10` or `3.11`.
+---
 ## 3. Step-by-Step Replication Guide
 
 ### Phase 1: Custom VPC & Networking (Section 2)
