@@ -31,7 +31,7 @@ schema = StructType([
 extract_udf = udf(extract_qa_logic, schema)
 
 # STEP 2: Load the unprocessed JSON from Step 1
-raw_df = spark.read.json("s3://25hnxx-cisc886-project-data/unprocessed_json/")
+raw_df = spark.read.json("s3://25hnxx-cisc886-project-data/raw")
 
 # STEP 3: Apply transformation and filter out nulls
 final_df = raw_df.withColumn("qa", extract_udf(col("raw_text"))) \
